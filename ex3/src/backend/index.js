@@ -16,9 +16,9 @@ app.use(express.static(__dirname + '/dist'))
 
 app.get('/news', (req, res) => {
     console.log('request');
-    const test = news.random();
+    const newsList = news.randomList();
     res.setHeader('Content-Type', 'application/json');
-    res.send(test)
+    res.send(newsList)
     res.end()
 })
 
