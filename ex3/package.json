@@ -2,7 +2,7 @@
   "name": "ex3",
   "version": "1.0.0",
   "description": "",
-  "main": "src/frontend/js/index.js",
+  "main": "src/frontend/js/main.js",
   "scripts": {
     "client": "webpack serve --hot --inline   --config ./config/webpack.dev.js",
     "server": "node ./src/backend/index.js",

@@ -12,6 +12,11 @@ module.exports = merge(common, {
       path.resolve(__dirname, '../src/frontend')
     ],
     publicPath: "/",
-    watchContentBase: true
+    watchContentBase: true,
+    historyApiFallback: {
+      rewrites: [
+        { from: /^\/details/, to: '/details.html' },
+      ]
+    }
   }
 });

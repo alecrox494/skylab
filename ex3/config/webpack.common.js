@@ -28,7 +28,8 @@ module.exports = {
         ]
     },
     entry: {
-        'index': path.resolve(__dirname, '../src/frontend/js/index.js')
+        index: path.resolve(__dirname, '../src/frontend/js/main.js'),
+        details: path.resolve(__dirname, '../src/frontend/js/details.js')
     },
     output: {
         filename: "frontend/js/[name].bundle.js",
@@ -44,6 +45,12 @@ module.exports = {
             inject: true,
             chunks: ['index'],
             filename: 'index.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: 'src/frontend/details.html',
+            inject: true,
+            chunks: ['details'],
+            filename: 'details.html'
         })
     ]
 };
