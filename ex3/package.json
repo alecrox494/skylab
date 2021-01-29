@@ -4,12 +4,10 @@
   "description": "",
   "main": "src/frontend/js/main.js",
   "scripts": {
-    "client": "webpack serve --hot --inline   --config ./config/webpack.dev.js",
-    "server": "node ./src/backend/index.js",
-    "build": "webpack  --config ./config/webpack.prod.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client": "webpack serve --hot --inline --config ./config/webpack.dev.js",
+    "server": "node ./src/backend/index.js"
   },
-  "author": "Seba",
+  "author": "Sebastiano Tringali",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.12.10",
