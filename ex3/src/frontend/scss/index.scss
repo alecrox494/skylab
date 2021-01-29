@@ -1,0 +1,28 @@
+main {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+footer {
+    position: fixed;
+    top: calc(100% - 62px);
+    width: 100%;
+}
+
+.bg-dark {
+    background-color: #1f364d!important;
+}
+
+.card {
+    &-title {
+        font-size: 15px;
+    }
+
+    &-text {
+        font-size: 12px;
+
+        &::after {
+            content: '...';
+        }
+    }
+}
