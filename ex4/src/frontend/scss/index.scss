@@ -1,0 +1,68 @@
+/*base*/
+$blue-300: #6ea8fe;
+body,h1,h2,h3,h4,h5,a,p {
+    font-family: 'Quicksand', sans-serif;
+}
+
+/*
+ * Custom translucent site header
+ */
+.site-header {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+
+    a {
+        color: #8e8e8e;
+        transition: color .15s ease-in-out;
+
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
+
+/* Logo */
+.logo {
+    svg {
+        color: $blue-300;
+    }
+}
+
+
+/*mod standard bs class*/
+
+.nav-item.active {
+    > .nav-link {
+        color: $blue-300;
+
+        &:hover {
+            color: $blue-300;
+        }
+    }
+}
+
+.link-secondary {
+    text-decoration: none;
+
+    svg {
+        color: $blue-300;
+    }
+}
+
+.carousel{
+    &-inner {
+        max-height: 92vh;
+    }
+
+    &-item  {
+        height: 100%;
+        padding-top: 100%;
+        
+        img {
+            position: absolute;
+            bottom: 10%;
+        }
+    }
+}
