@@ -26,7 +26,11 @@ class Services {
 
 		const response = await fetch(url, fetchOption);
 		return response.json();
-    }
+	}
+	
+	getHost() {
+		return 'http://localhost:3001';
+	}
     
 }
 

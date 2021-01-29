@@ -1,4 +1,4 @@
-import '../css/index.scss'
+import '../scss/index.scss'
 import NewsList from './newsList.js'
 
 new NewsList();

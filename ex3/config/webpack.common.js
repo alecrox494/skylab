@@ -29,7 +29,7 @@ module.exports = {
     },
     entry: {
         index: path.resolve(__dirname, '../src/frontend/js/main.js'),
-        details: path.resolve(__dirname, '../src/frontend/js/details.js')
+        articleDetails: path.resolve(__dirname, '../src/frontend/js/articleDetails.js')
     },
     output: {
         filename: "frontend/js/[name].bundle.js",
@@ -47,10 +47,10 @@ module.exports = {
             filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
-            template: 'src/frontend/details.html',
+            template: 'src/frontend/articleDetails.html',
             inject: true,
-            chunks: ['details'],
-            filename: 'details.html'
+            chunks: ['articleDetails'],
+            filename: 'articleDetails.html'
         })
     ]
 };

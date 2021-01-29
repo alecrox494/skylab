@@ -26,6 +26,7 @@ class NewsList {
     }
 
     printNews(newsArray) {
+        const host = this.services.getHost();
         let index = 0;
         newsArray.forEach(entryNews => {
 			let card =
@@ -36,7 +37,7 @@ class NewsList {
                         <hr>
                         <p class="card-text">${entryNews.body}</p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <a href="details/${index}" class="btn btn-sm btn-outline-primary">Read More</a>
+                            <a href="${host}/articleDetails/${index}" class="btn btn-sm btn-outline-primary">Read More</a>
                             <small class="text-muted">${entryNews.author}</small>
                         </div>
                     </div>

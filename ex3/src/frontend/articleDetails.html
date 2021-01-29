@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyLab Ex3 - News List</title>
+    <title>SkyLab Ex3 - News Detail</title>
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -18,20 +18,34 @@
         <div class="navbar navbar-dark fixed-top bg-dark shadow-sm bg-dark">
             <div class="container">
                 <a href="http://localhost:3001" class="navbar-brand d-flex align-items-center">
-                    <strong>SkyLab Ex3 - News List</strong>
+                    <strong>SkyLab Ex3 - News Detail</strong>
                 </a>
-                <button class="btn btn-outline-light" type="button" id="newsLoading">Load News</button>
+                <a href="http://localhost:3001" class="btn btn-outline-light">Back</a>
             </div>
         </div>
     </header>
 
     <main class="flex-shrink-0">
-        <div class="py-5 bg-light">
+        <div class="py-5">
             <div class="container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="newsContainer"></div>
+                <div class="row g-3">
+                    <div class="col">
+                        <h1 class="article-title" id="articleTitle"></h3>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted" id="articleAuthor"></small>
+                                <div class="btn-group">
+                                    <a href="#" class="btn btn-sm btn-outline-primary">fb</a>
+                                    <a href="#" class="btn btn-sm btn-outline-dark">in</a>
+                                    <a href="#" class="btn btn-sm btn-outline-info">tw</a>
+                                  </div>
+                            </div>
+                        <hr>
+                        <p class="article-text" id="articleText"></p>
+                        
+                    </div>
+                </div>
             </div>
         </div>
-
     </main>
 
     <footer class="footer mt-auto py-3 bg-dark">

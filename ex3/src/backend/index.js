@@ -22,6 +22,14 @@ app.get('/news', (req, res) => {
     res.end()
 })
 
+app.get('/article', (req, res) => {
+    console.log('request');
+    const article = news.randomArticle();
+    res.setHeader('Content-Type', 'application/json');
+    res.send(article)
+    res.end()
+})
+
 app.use(function(err, req, res, next) {
     console.error(err.stack);
     res.status(500).send('Something broke!');

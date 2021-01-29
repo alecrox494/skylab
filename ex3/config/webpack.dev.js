@@ -8,14 +8,14 @@ module.exports = merge(common, {
     port: 3001,
     contentBase: [
       path.resolve(__dirname, '../src/frontend/js'),
-      path.resolve(__dirname, '../src/frontend/css'),
+      path.resolve(__dirname, '../src/frontend/scss'),
       path.resolve(__dirname, '../src/frontend')
     ],
     publicPath: "/",
     watchContentBase: true,
     historyApiFallback: {
       rewrites: [
-        { from: /^\/details/, to: '/details.html' },
+        { from: /^\/articleDetails/, to: '/articleDetails.html' },
       ]
     }
   }

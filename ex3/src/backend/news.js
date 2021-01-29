@@ -56,11 +56,24 @@ class News {
         return objectToSend;
     }
 
-    selectRandomString(length) {
+    randomArticle() {
+        return {
+            title: this.selectRandomString(60),
+            author: this.selectRandomAuthor(),
+            body: this.selectRandomString()
+        };
+    }
+
+    selectRandomString(length = 0) {
         const maxLenght = this.textList.length-1
         const randomTextNumber = Math.floor(Math.random() * maxLenght);
         let stringSelected = this.textList[randomTextNumber];
-        return stringSelected.slice(0, length);
+
+        if (length > 0) {
+            return stringSelected.slice(0, length);
+        } else {
+            return stringSelected
+        }
     }
 
     selectRandomAuthor() {
