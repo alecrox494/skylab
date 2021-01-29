@@ -1,0 +1,69 @@
+/* Mini reset */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+/* Struttura */
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.centered-div {
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    background-color: rgb(184, 0, 0);
+    position: relative;
+}
+
+/* Div animati */
+.left-top, .right-top, .left-bottom, .right-bottom {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.left-top, .right-top {
+    top:0;
+    border-top: solid 1px #fff;
+}
+
+.left-bottom, .right-bottom {
+    bottom: 0;
+    border-bottom: solid 1px #fff;
+}
+
+.left-top, .left-bottom {
+    left: 0;
+    border-left: solid 1px #fff;
+}
+
+.right-top, .right-bottom {
+    right: 0;
+    border-right: solid 1px #fff;
+}
+
+.centered-div:hover .left-top,
+.centered-div:hover .right-top,
+.centered-div:hover .left-bottom,
+.centered-div:hover .right-bottom  {
+    opacity: 1;
+}
+
+.centered-div:hover .left-top {transform: translate(15px,15px)}
+.centered-div:hover .right-top {transform: translate(-15px,15px)}
+.centered-div:hover .left-bottom {transform: translate(15px,-15px)}
+.centered-div:hover .right-bottom {transform: translate(-15px,-15px)}
+
+.centered-div:hover .left-top:hover,
+.centered-div:hover .right-top:hover,
+.centered-div:hover .left-bottom:hover,
+.centered-div:hover .right-bottom:hover {
+    border-color: chartreuse;
+    border-width: 3px;
+}
