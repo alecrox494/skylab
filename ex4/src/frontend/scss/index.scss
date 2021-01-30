@@ -1,5 +1,6 @@
 /*base*/
 $blue-300: #6ea8fe;
+$red-300: #fe6e6e;
 body,h1,h2,h3,h4,h5,a,p {
     font-family: 'Quicksand', sans-serif;
 }
@@ -64,5 +65,17 @@ body,h1,h2,h3,h4,h5,a,p {
             position: absolute;
             bottom: 10%;
         }
+    }
+}
+
+.product-details {
+    margin: 20px 0;
+
+    &-title {
+        color: $blue-300;
+    }
+
+    .badge {
+        color: $red-300;
     }
 }
