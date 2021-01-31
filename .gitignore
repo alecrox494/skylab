@@ -48,6 +48,7 @@ typings/
 *.tsbuildinfo
 
 # Optional npm cache directory
+package-lock.json
 .npm
 
 # Optional eslint cache
