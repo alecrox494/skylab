@@ -1,6 +1,7 @@
 /*base*/
 $blue-300: #6ea8fe;
-$red-300: #fe6e6e;
+$red-300: #dc3545;
+$green-300: #198754;
 body,h1,h2,h3,h4,h5,a,p {
     font-family: 'Quicksand', sans-serif;
 }
@@ -31,6 +32,9 @@ body,h1,h2,h3,h4,h5,a,p {
     }
 }
 
+.hidden {
+    display: none;
+}
 
 /*mod standard bs class*/
 
@@ -38,9 +42,21 @@ body,h1,h2,h3,h4,h5,a,p {
     > .nav-link {
         color: $blue-300;
 
+        &--red {
+            color: $red-300;
+            font-weight: 600;
+        }
+
         &:hover {
             color: $blue-300;
         }
+    }
+}
+
+.nav-link {
+    &--red {
+        color: $red-300;
+        font-weight: 600;
     }
 }
 
@@ -73,9 +89,159 @@ body,h1,h2,h3,h4,h5,a,p {
 
     &-title {
         color: $blue-300;
+        font-weight: 600;
+    }
+
+    &-price,
+    &-select,
+    &-cta,
+    &-info {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &-breadcrumb{
+        .breadcrumb {
+            margin-bottom: 0.2rem;
+        }
+        
+        .breadcrumb-item {
+            padding-left: .2rem;
+            padding-right: 0;
+
+            &::before {
+                padding-right: .2rem;
+            }
+            a {
+                font-size: 0.8rem;
+                text-decoration: none;
+                color: #222;
+
+                &:hover {
+                    color: $red-300;
+                }
+            }
+        }
+        
+    }
+
+    &-cta {
+        button {
+            border-radius: 0;
+        }
+    }
+
+    &-size-guide {
+        position: absolute;
+        bottom: -22px;
+        right: 2px;
+        font-size: 0.8rem;
+        color: #000;
+        
+        &:hover {
+            color: $red-300;
+        }
     }
 
     .badge {
         color: $red-300;
+
+        &.customize {
+            color: $green-300;
+        }
     }
+}
+
+.input-group-text {
+    border-radius: 0;
+    background: #242322;
+    color: #fff;
+}
+
+.form-select {
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.tab-pane {
+    padding: 10px;
+}
+
+
+.colours-wrapper {
+    position: relative;
+
+    .input-invisible {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0
+    }
+    
+    .btn-colour {
+        position: relative;
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        margin-bottom: 0;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 5px #fff,0 0 0 1px #ced4da;
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+        transition: border-color .1s;
+
+        &:hover {
+            box-shadow: inset 0 0 0 5px #fff,0 0 0 1px #868e96
+        }
+
+        &.active {
+            box-shadow: inset 0 0 0 5px #fff,0 0 0 2px #495057
+        }
+    }
+}
+
+.modal-customize {
+    .modal-content {
+        border: none;
+        border-radius: 0;
+    }
+
+    .modal-title {
+        color: $blue-300;
+    }
+
+    .modal-footer {
+        button {
+            border-radius: 0;
+        }
+    }
+
+    .customize-img {
+        position: relative;
+        .sticker {
+            position: absolute;
+            max-width: 20%;
+            top: 44%;
+            left: 38%;
+        }
+
+    }
+
+    .stickers-list {
+        list-style: none;
+        display: inline-flex;
+        padding-left: 0px;
+
+        .sticker-item {
+            max-width: 15%;
+            cursor: pointer;
+
+            &.active {
+                border-bottom: solid 2px $blue-300;
+            }
+        }
+    }
+    
 }
