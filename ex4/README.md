@@ -4,3 +4,5 @@
 2) Digita il comando: `npm i`
 5) Digita il comando: `npm run client`
 6) Apri il browser e digita il seguente url: `http://localhost:3002`
+
+NB. ho testato la funzionalità sulle ultime versioni di Chrome, Firefox e Edge.
